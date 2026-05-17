@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">ADskip</string>
+    <string name="accessibility_service_description">
+        ADskip 使用无障碍服务自动跳过开屏广告和摇一摇广告。\n
+        基于 GKD 风格规则引擎，支持订阅规则在线更新。
+    </string>
+</resources>

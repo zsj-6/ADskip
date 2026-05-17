@@ -1,0 +1,176 @@
+{
+  "version": 1,
+  "rules": [
+    {
+      "name": "穿山甲-开屏跳过",
+      "appId": "",
+      "matches": [
+        "@TextView[text*='跳过'][clickable=true]",
+        "FrameLayout > @TextView[text*='跳过']",
+        "TextView[text~='跳过\\s*\\d+\\s*s']",
+        "TextView[text~='\\d+\\s*s?\\s*[\\/\\|｜]?\\s*跳过']",
+        "@TextView[vid*='tt_splash_skip']",
+        "@TextView[vid*='tt_skip_view']"
+      ],
+      "action": "click",
+      "actionCd": 2000,
+      "priority": 10
+    },
+    {
+      "name": "广点通-开屏跳过",
+      "appId": "",
+      "matches": [
+        "@TextView[vid*='gdt_skip']",
+        "@ImageView[vid*='gdt_skip']",
+        "@TextView[vid*='gdt_close']"
+      ],
+      "action": "click",
+      "actionCd": 2000,
+      "priority": 10
+    },
+    {
+      "name": "快手-开屏跳过",
+      "appId": "",
+      "matches": [
+        "@TextView[vid*='ksad_skip']",
+        "@TextView[vid*='ksad_close']"
+      ],
+      "action": "click",
+      "actionCd": 2000,
+      "priority": 10
+    },
+    {
+      "name": "百度-开屏跳过",
+      "appId": "",
+      "matches": [
+        "@TextView[vid*='baidumobad_skip']",
+        "@TextView[vid*='bd_ad_skip']",
+        "@TextView[vid*='mobads_skip']"
+      ],
+      "action": "click",
+      "actionCd": 2000,
+      "priority": 10
+    },
+    {
+      "name": "通用-跳过按钮(ID)",
+      "appId": "",
+      "matches": [
+        "@*[vid*='skip_button'][clickable=true]",
+        "@*[vid*='skip_btn'][clickable=true]",
+        "@*[vid*='skip_view'][clickable=true]",
+        "@*[vid*='close_button'][clickable=true]",
+        "@*[vid*='close_btn'][clickable=true]",
+        "@*[vid*='iv_close'][clickable=true]",
+        "@*[vid*='img_close'][clickable=true]",
+        "@*[vid*='btn_close'][clickable=true]",
+        "@*[vid*='tv_skip'][clickable=true]",
+        "@*[vid*='tv_close'][clickable=true]",
+        "@*[vid*='count_down'][clickable=true]",
+        "@*[vid*='countdown_text'][clickable=true]"
+      ],
+      "action": "click",
+      "actionCd": 1500,
+      "priority": 5
+    },
+    {
+      "name": "通用-跳过文字(可点击)",
+      "appId": "",
+      "matches": [
+        "@*[text='跳过'][clickable=true]",
+        "@*[text='关闭'][clickable=true]",
+        "@*[text='×'][clickable=true]",
+        "@*[text='x'][clickable=true]",
+        "@*[text='SKIP'][clickable=true]",
+        "@*[text='Skip'][clickable=true]",
+        "@*[text='关闭广告'][clickable=true]",
+        "@*[text='跳过广告'][clickable=true]"
+      ],
+      "action": "click",
+      "actionCd": 1500,
+      "priority": 4
+    },
+    {
+      "name": "倒计时跳过(步道乐跑等)",
+      "appId": "",
+      "matches": [
+        "@*[text~='\\d+\\s*s?\\s*[\\/\\|｜]\\s*跳过'][clickable=true]",
+        "@*[text~='跳过[\\/\\|｜]?\\s*\\d+\\s*s?'][clickable=true]"
+      ],
+      "action": "click",
+      "actionCd": 1500,
+      "priority": 6
+    },
+    {
+      "name": "摇一摇-关闭按钮",
+      "appId": "",
+      "matches": [
+        "@*[text='不感兴趣'][clickable=true]",
+        "@*[text='我知道了'][clickable=true]"
+      ],
+      "action": "click",
+      "actionCd": 3000,
+      "actionMaximum": 1,
+      "priority": 3
+    }
+  ],
+  "globalRules": [
+    {
+      "name": "全局-仅已知广告包名内全文扫描",
+      "appId": "bytedance",
+      "matches": [
+        "@*[text*='跳过'][clickable=true]",
+        "@*[text*='关闭'][clickable=true]",
+        "@*[text*='skip'][clickable=true]",
+        "@*[text*='close'][clickable=true]",
+        "@*[text*='×'][clickable=true]"
+      ],
+      "action": "click",
+      "actionCd": 1000,
+      "priority": 2
+    },
+    {
+      "name": "全局-广告SDK包名",
+      "appId": "kwad",
+      "matches": [
+        "@*[text*='跳过'][clickable=true]",
+        "@*[text*='关闭'][clickable=true]"
+      ],
+      "action": "click",
+      "actionCd": 1000,
+      "priority": 2
+    },
+    {
+      "name": "全局-广告SDK包名",
+      "appId": "mobads",
+      "matches": [
+        "@*[text*='跳过'][clickable=true]",
+        "@*[text*='关闭'][clickable=true]"
+      ],
+      "action": "click",
+      "actionCd": 1000,
+      "priority": 2
+    },
+    {
+      "name": "全局-广告SDK包名",
+      "appId": "sigmob",
+      "matches": [
+        "@*[text*='跳过'][clickable=true]",
+        "@*[text*='关闭'][clickable=true]"
+      ],
+      "action": "click",
+      "actionCd": 1000,
+      "priority": 2
+    },
+    {
+      "name": "全局-广告SDK包名",
+      "appId": "ads",
+      "matches": [
+        "@*[text*='跳过'][clickable=true]",
+        "@*[text*='关闭'][clickable=true]"
+      ],
+      "action": "click",
+      "actionCd": 1000,
+      "priority": 1
+    }
+  ]
+}
